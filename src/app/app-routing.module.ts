@@ -1,4 +1,3 @@
-
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SendEmailComponent } from './auth/send-email/send-email.component';
@@ -11,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    loadChildren: () => import('./main/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'login',
@@ -22,6 +21,21 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () =>
       import('./auth/register/module/register.module').then((m) => m.RegisterModule),
+  },
+  {
+    path: 'instructions',
+    loadChildren: () =>
+      import('./main/instructions/module/instructions.module').then((m) => m.InstructionsModule),
+  },
+  {
+    path: 'board',
+    loadChildren: () =>
+      import('./main/board/module/board.module').then((m) => m.BoardModule),
+  },
+  {
+    path: 'languages',
+    loadChildren: () =>
+      import('./main/languages/module/languages.module').then((m) => m.LanguagesModule),
   },
   {
     path: 'verification-email',
