@@ -1,8 +1,7 @@
-import { AuthService } from './auth/services/auth.service';
-import { environment } from './../environments/environment';
 //defecto
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 //modulos
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,13 +13,16 @@ import { AngularFireModule } from '@angular/fire';
 import{AngularFireAuthModule} from '@angular/fire/auth'
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
-
-
+import { AuthService } from './auth/services/auth.service';
+import { environment } from './../environments/environment';
 
 //Componentes
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AppComponent } from './app.component';
 import { SendEmailComponent } from './auth/send-email/send-email.component';
+import { InstructionsComponent } from './main/instructions/instructions.component';
+import { BoardComponent } from './main/board/board.component';
+import { LanguagesComponent } from './main/languages/languages.component';
 
 
 
@@ -29,7 +31,7 @@ import { SendEmailComponent } from './auth/send-email/send-email.component';
   declarations: [
     AppComponent,
     NavbarComponent,  
-    SendEmailComponent,  
+    SendEmailComponent, InstructionsComponent, BoardComponent, LanguagesComponent,  
     
   ],
   imports: [
