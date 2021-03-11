@@ -1,7 +1,32 @@
-<h1>
-    <button type="button" class="btn btn-primary">
-        prueba
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+      <div class="card">
+        <div class="card-body text-center">
+          <h1 class="text-center">
+            Menu Principal
+          </h1>
+          <button type= "button" class = "btn btn-primary btn-lg mt-3" (click)="StartGame()">
+            Iniciar Partida
+          </button>
+          <h1>
 
-    </button>
-    Home Page,  Tablero
-</h1>
+          </h1>
+          <button type= "button" class = "btn btn-primary btn-lg mt-3" (click)="Instructions()">
+            Instruciones 
+          </button>
+          <h1>
+
+          </h1>
+          <button type="button" class = "btn btn-primary btn-lg mt-3" style="float: right;" (click)= "Languages()">
+            Idiomas
+          </button>
+          <h1>
+
+          </h1>
+          <button type="button" class = "btn btn-primary btn-lg mt-3" style="float: left;" (click)= "exit()">
+            Salir
+          </button>
+        </div>
+    </div>
+  </div>
+</div>
