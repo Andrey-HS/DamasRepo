@@ -1,122 +1,303 @@
-
-<div id="ht">
-<!-- astea 2 sunt puse ca indexarea claselor sa inceapa de la 1 -->
-<div class="checker white_checker" style="display:none"> </div>
-<div class="checker black_checker" style="display:none"> </div>
-
-<div class="square" style="display: none" id ="ht"> </div>
-<div class="black_background" id="black_background"> </div>
-
-	<div class="score" id="score">
-		<br>
-	</div>
-<div class="table" id="table">
-
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>	
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>
-	<div class="checker white_checker"> </div>	
-
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-	<div class="checker black_checker"> </div>
-
-
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="clear_float"> </div>
-	
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="clear_float"> </div>
-
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="clear_float"> </div>
-
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="clear_float"> </div>
-
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="clear_float"> </div>
-
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="clear_float"> </div>
-
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="clear_float"> </div>
-
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="square white_square"> </div>
-	<div class="square black_square"> </div>
-	<div class="clear_float"> </div>
+<div style="text-align: center" class="mt-3">
+    <button style="alig" type="button" class="btn btn-danger mr-3" id="changeColor" (click)="changeColor()">
+        Cambiar color de tablero
+    </button>
+    <button style="alig" type="button" class="btn btn-danger mr-3" id="changePieza2" (click)="changePieza2()">
+        Cambiar color de fichas inferiores
+    </button>
+    <button style="alig" type="button" class="btn btn-danger" id="changePieza2" (click)="changePieza1()">
+        Cambiar color de fichas superiores
+    </button>
 </div>
+<div id="tablero"  class="mt-3 mb-3 " style=" margin-left: 200px;">
+    <div class="fila">
+        <div class="casilla"></div>
+        <div class="casilla">a</div>
+        <div class="casilla">b</div>
+        <div class="casilla">c</div>
+        <div class="casilla">d</div>
+        <div class="casilla">e</div>
+        <div class="casilla">f</div>
+        <div class="casilla">g</div>
+        <div class="casilla">h</div>
+        <div class="casilla"></div>
+    </div>
+
+    <div class="fila">
+        <div class="casilla">
+            <span >8</span>
+        </div>
+        <div id="a8" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="b8" class="casilla opaca">
+            <span id="pieza_blanca_1" class="pieza">&#9920;</span>
+        </div>
+        <div id="c8" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="d8" class="casilla opaca">
+            <span id="pieza_blanca_2" class="pieza">&#9920;</span>
+        </div>
+        <div id="e8" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="f8" class="casilla opaca">
+            <span id="pieza_blanca_3" class="pieza">&#9920;</span>
+        </div>
+        <div id="g8" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="h8" class="casilla opaca">
+            <span id="pieza_blanca_4" class="pieza">&#9920;</span>
+        </div>
+        <div class="casilla">
+            <span>8</span>
+        </div>   
+    </div>  
+
+    <div class="fila">
+        <div class="casilla">
+            <span >7</span>
+        </div>      
+        <div id="a7" class="casilla opaca">
+            <span id="pieza_blanca_5" class="pieza">&#9920;</span>
+        </div>
+        <div id="b7" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="c7" class="casilla opaca">
+            <span id="pieza_blanca_6" class="pieza">&#9920;</span>
+        </div>
+        <div id="d7" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="e7" class="casilla opaca">
+            <span id="pieza_blanca_7" class="pieza">&#9920;</span>
+        </div>
+        <div id="f7" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="g7" class="casilla opaca">
+            <span id="pieza_blanca_8" class="pieza">&#9920;</span>
+        </div>
+        <div id="h7" class="casilla tenue">
+            <span></span>
+        </div>
+        <div class="casilla">
+            <span>7</span>
+        </div>   
+    </div>
+    
+    <div class="fila">
+        <div class="casilla">
+            <span>6</span>
+        </div>
+        <div id="a6" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="b6" class="casilla opaca">
+            <span id="pieza_blanca_9" class="pieza">&#9920;</span>
+        </div>
+        <div id="c6" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="d6" class="casilla opaca">
+            <span id="pieza_blanca_10" class="pieza">&#9920;</span>
+        </div>
+        <div id="e6" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="f6" class="casilla opaca">
+            <span id="pieza_blanca_11" class="pieza">&#9920;</span>
+        </div>
+        <div id="g6" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="h6" class="casilla opaca">
+            <span id="pieza_blanca_12" class="pieza">&#9920;</span>
+        </div>
+        <div class="casilla">
+            <span>6</span>
+        </div>   
+    </div>  
+
+    <div class="fila">
+        <div class="casilla">
+            <span >5</span>
+        </div>      
+        <div id="a5" class="casilla opaca">
+            <span>  </span>
+        </div>
+        <div id="b5" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="c5" class="casilla opaca">
+            <span></span>
+        </div>
+        <div id="d5" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="e5" class="casilla opaca">
+            <span></span>
+        </div>
+        <div id="f5" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="g5" class="casilla opaca">
+            <span></span>
+        </div>
+        <div id="h5" class="casilla tenue">
+            <span></span>
+        </div>
+        <div class="casilla">
+            <span >5</span>
+        </div>   
+    </div> 
+
+    <div class="fila">
+        <div class="casilla">
+            <span >4</span>
+        </div>
+        <div id="a4" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="b4" class="casilla opaca">
+            <span>  </span>
+        </div>
+        <div id="c4" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="d4" class="casilla opaca">
+            <span>  </span>
+        </div>
+        <div id="e4" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="f4" class="casilla opaca">
+            <span>  </span>
+        </div>
+        <div id="g4" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="h4" class="casilla opaca">
+            <span>  </span>
+        </div>
+        <div class="casilla">
+            <span >4</span>
+        </div>   
+    </div>  
+
+    <div class="fila">
+        <div class="casilla">
+            <span >3</span>
+        </div>      
+        <div id="a3" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_9" >&#9922;</span>
+        </div>
+        <div id="b3" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="c3" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_10" >&#9922;</span>
+        </div>
+        <div id="d3" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="e3" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_11" >&#9922;</span>
+        </div>
+        <div id="f3" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="g3" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_12" >&#9922;</span>
+        </div>
+        <div id="h3" class="casilla tenue">
+            <span></span>
+        </div>
+        <div class="casilla">
+            <span >3</span>
+        </div>   
+    </div> 
+
+    <div class="fila">
+        <div class="casilla">
+            <span >2</span>
+        </div>
+        <div id="a2" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="b2" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_5" >&#9922;</span>
+        </div>
+        <div id="c2" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="d2" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_6" >&#9922;</span>
+        </div>
+        <div id="e2" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="f2" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_7" >&#9922;</span>
+        </div>
+        <div id="g2" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="h2" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_8" >&#9922;</span>
+        </div>
+        <div class="casilla">
+            <span >2</span>
+        </div>   
+    </div>  
+
+    <div class="fila">
+        <div class="casilla">
+            <span >1</span>
+        </div>      
+        <div id="a1" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_1" >&#9922;</span>
+        </div>
+        <div id="b1" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="c1" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_2" >&#9922;</span>
+        </div>
+        <div id="d1" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="e1" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_3" >&#9922;</span>
+        </div>
+        <div id="f1" class="casilla tenue">
+            <span></span>
+        </div>
+        <div id="g1" class="casilla opaca">
+            <span class="pieza2" id="pieza_negra_4" >&#9922;</span>
+        </div>
+        <div id="h1" class="casilla tenue">
+            <span></span>
+        </div>
+        <div class="casilla">
+            <span >1</span>
+        </div>   
+    </div>
+    
+    <div class="fila">
+        <div class="casilla"></div>
+        <div class="casilla">a</div>
+        <div class="casilla">b</div>
+        <div class="casilla">c</div>
+        <div class="casilla">d</div>
+        <div class="casilla">e</div>
+        <div class="casilla">f</div>
+        <div class="casilla">g</div>
+        <div class="casilla">h</div>
+        <div class="casilla"></div>
+    </div>
+
 </div>

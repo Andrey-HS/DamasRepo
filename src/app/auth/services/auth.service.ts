@@ -57,7 +57,6 @@ export class AuthService {
       this.updateUserData(user);
       return user;
     } catch (error) {
-      console.log(error,"se jue");
     }
   }
 
